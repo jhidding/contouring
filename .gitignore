@@ -1,0 +1,12 @@
+# vim
+*~
+.*.swp
+
+# c/c++
+*.o
+*.so
+obj
+
+# results
+*.svg
+
