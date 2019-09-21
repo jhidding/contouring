@@ -51,6 +51,6 @@ std::vector<int> pre_scan(
         }
     }
 
-    return std::move(result);
+    return result;
 }
 

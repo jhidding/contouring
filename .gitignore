@@ -9,4 +9,5 @@ obj
 
 # results
 *.svg
+build
 
