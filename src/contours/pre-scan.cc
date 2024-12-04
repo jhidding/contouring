@@ -4,6 +4,7 @@
 #include <experimental/tuple>
 
 using std::experimental::apply;
+using std::size_t;
 
 inline int sign(double x)
 {
@@ -53,4 +54,3 @@ std::vector<int> pre_scan(
 
     return result;
 }
-
