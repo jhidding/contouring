@@ -35,6 +35,24 @@ inline bool even(unsigned i)
     return i % 2 == 0;
 }
 
+/*!
+ * `draw_path` is the core function of the contouring library.
+ *
+ * @param f         Function `f(double x, double y) -> double`. The function
+ *                  that needs contouring.
+ * @param s         Level at which the contour should be drawn.
+ * @param grid      Grid at which the function should be sampled.
+ * @param tally     Result of the pre-scan.
+ *
+ * The other parameters should be call-backs for the drawing functions.
+ * These commands are modelled after the Cairo API and work well with
+ * SVG paths for instance.
+ *
+ * @param move_to    Function of (x, y), command to move pen.
+ * @param line_to    Function of (x, y), draw line.
+ * @param curve_to   Draw Bezier curve (x1, y1, x2, y2, x3, y3).
+ * @param close_path Close the path (no arguments).
+ */
 template <typename F, typename F2, typename F6, typename F0>
 void draw_path(
         F f, double s,
